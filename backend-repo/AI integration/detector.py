@@ -59,7 +59,7 @@ def parse_score(result, model_name):
     
     return None
 
-def process_image(image_path):
+def detect_deepfake(image_path):
     """Processes an image, scoring the original and a 60% center crop across two models."""
     print(f"\n--- Processing Image: {image_path} ---")
     
@@ -139,6 +139,6 @@ if __name__ == "__main__":
     # Simple CLI usage for debugging
     import sys
     if len(sys.argv) > 1:
-        process_image(sys.argv[1])
+        detect_deepfake(sys.argv[1])
     else:
         print("Usage: python detector.py <path_to_image>")
